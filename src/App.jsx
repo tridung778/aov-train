@@ -1,15 +1,18 @@
-import { Joystick } from "react-joystick-component";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import AvoidPage from './pages/Avoid/AvoidPage'
+import HomePage from './pages/Home/HomePage'
 
 function App() {
   return (
     <>
-      <div>
-        <h1 className="text-red-500">Hello world!</h1>
-        <img src="./images/map.jpg" alt="" />
-        <Joystick size={100} sticky={true}></Joystick>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/avoid" element={<AvoidPage />} />
+        </Routes>
+      </Router>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
