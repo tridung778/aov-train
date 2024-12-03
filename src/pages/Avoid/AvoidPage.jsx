@@ -35,7 +35,7 @@ const AvoidPage = () => {
       <div className="absolute bottom-0 z-10 m-10">
         <Joystick size={100} move={handleMove} stop={handleStop}></Joystick>
       </div>
-      <Character x={position.x} y={position.y} />
+      <Character x={position.x} y={position.y} modelName="veres" />
     </div>
   )
 }

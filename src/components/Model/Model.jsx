@@ -2,11 +2,11 @@
 import { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-const Model = ({ x, y }) => {
+const Model = ({ x, y, modelName }) => {
   const modelRef = useRef()
 
   // Tải file GLTF
-  const { scene } = useGLTF('/models/scene.gltf') // Đường dẫn tới file GLTF
+  const { scene } = useGLTF(`/models/${modelName}/scene.gltf`) // Đường dẫn tới file GLTF
 
   return (
     <primitive
